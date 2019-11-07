@@ -2,7 +2,7 @@ import React from 'react'
 
 class Counter extends React.Component {
   state = {
-    count: 3
+    count: 0
 
   }
 
@@ -14,8 +14,14 @@ class Counter extends React.Component {
     )
   }
 
+  handleClick = () => {
+    this.setState(({ count }) => ({
+      count: count + 1
+    }))
+  }
+
   render () {
-    return <button onClick= {() => alert('component Wally')}>{this.state.count}</button>
+    return <button onClick={this.handleClick}>{this.state.count}</button>
   }
 }
 
