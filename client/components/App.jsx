@@ -1,8 +1,11 @@
 import React from 'react'
+import Counter from './Counter'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <React.Fragment>
+      <Counter />
+    </React.Fragment>
   )
 }
 
