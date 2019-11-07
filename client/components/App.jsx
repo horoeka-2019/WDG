@@ -1,5 +1,6 @@
 import React from 'react'
 import Counter from './Counter'
+import Landing from './Landing'
 
 function getRandomInt (min, max) {
   min = Math.ceil(min)
@@ -33,6 +34,7 @@ class App extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <Landing />
         <svg width={window.innerWidth} height={window.innerHeight}>
           <circle cx={this.state.circle.cx} cy={this.state.circle.cy} r={this.state.circle.r} />
         </svg>
