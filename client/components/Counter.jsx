@@ -14,6 +14,7 @@ class Counter extends React.Component {
     )
   }
 
+
   handleClick = () => {
     this.setState(({ count }) => ({
       count: count + 1
@@ -21,7 +22,12 @@ class Counter extends React.Component {
   }
 
   render () {
-    return <button onClick={this.handleClick}>{this.state.count}</button>
+    return (
+      <React.Fragment>
+        <button onClick={this.handleClick}>Wally</button>
+        <button>{this.state.count}</button>
+      </React.Fragment>
+    )
   }
 }
 
