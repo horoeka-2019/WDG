@@ -1,6 +1,5 @@
 import React from 'react'
 // import Counter from './Counter'
-import Don from './Don'
 import Landing from './Landing'
 import { Route } from 'react-router-dom'
 import Game from './Game'
@@ -38,11 +37,11 @@ class App extends React.Component {
         {/* <Landing />
         <Game handleClick={this.handleClick} count={this.state.count}/> */}
 
-        <Game handleClick={this.handleClick} count={this.state.count}/>
+        {/* <Game handleClick={this.handleClick} count={this.state.count}/> */}
 
-        <Route exact path='/' component = { Landing } />
+        {/* <Route exact path='/' component = { Landing } />
         <Route path='/game' component = { Game } />
-        <Route path='/win' component = { Win } />
+        <Route path='/win' component = { Win } /> */}
 
         {/* <Counter />
         <svg width={window.innerWidth} height={window.innerHeight}>
@@ -51,6 +50,10 @@ class App extends React.Component {
         {/* <Landing />
         <Counter /> */}
 
+        {/* <Landing /> */}
+        <Route exact path='/' component= { Landing }/>
+        <Route path='/game' render={() => <Game handleClick={this.handleClick} count={this.state.count} isAuthed={true}/>}/>
+        <Route path='/win' component = { Win } /> 
       </React.Fragment>
     )
   }
