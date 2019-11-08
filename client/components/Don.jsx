@@ -37,14 +37,13 @@ class Don extends React.Component {
  render () {
    const styles = {
      donContainer: {
-       backgroundImage: `url${'images/don_wally.jpg'}`
+       fill: `url${'images/don_wally.jpg'}`
      }
    }
    return (
      <svg width={window.innerWidth} height={window.innerHeight} style>
-       <rect x={this.state.rect.x} y={this.state.rect.y} style={styles.donContainer} />
+       <rect x={this.state.rect.x} y={this.state.rect.y} width="50" style={styles.donContainer} />
      </svg>
-     // img maybe instead?
    )
  }
 }
