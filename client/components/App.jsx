@@ -4,6 +4,7 @@ import Landing from './Landing'
 import { Route } from 'react-router-dom'
 import Game from './Game'
 import Win from './Win'
+import "./App.scss"
 import Background from './Background'
 
 const randomHexColor = () =>
@@ -36,7 +37,7 @@ class App extends React.Component {
       }
     }
     return (
-      <div style={{backgroundImage: `url(${'images/wally1.jpg'})`}}>
+      <div style={{height:'100%'}}>
         {/* <Landing />
         <Game handleClick={this.handleClick} count={this.state.count}/> */}
 

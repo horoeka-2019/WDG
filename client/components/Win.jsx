@@ -8,10 +8,11 @@ class Win extends React.Component {
     return (
       <React.Fragment>
         <div className='container textCenter' style={{
-          backgroundImage: `url(${'images/wally1.jpg'})`
+          backgroundImage: `url(${'images/wally1.jpg'})`,
+          height:'100%'
         }}>
           <Card className="d-flex justify-content-center" style={{ width: '18rem' }}>
-            <Card.Img style={{ width: '18rem' }} variant="top" src="images/don_face.png"/>
+            <Card.Img style={{ width: '8rem' }} variant="top" src="images/don_face.png"/>
             <Card.Body>
               <Card.Title>You won!</Card.Title>
               <Card.Text>

@@ -57,7 +57,7 @@ class Don extends React.Component {
          this.state.redirect ? <Redirect to='/win' />
            : <svg width={window.innerWidth} height={window.innerHeight - 200} styles={{ backgroundImage: `url(${'../../server/public/images/wally1.jpg'})` }}>
              <rect x={this.state.rect.x} y={this.state.rect.y} height="80" width="50" onClick={this.handleClick}
-             
+             //  style={{backgroundImage: `url(${'images/don_wally.jpg'})`}}
              />
            </svg>
        })

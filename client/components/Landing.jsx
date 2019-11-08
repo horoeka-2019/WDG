@@ -10,12 +10,12 @@ class Landing extends React.Component {
       <React.Fragment>
         <div className='container textCenter' style={{
           // width: '100%',
-          // height: '100%',
-          marginTop: '50px'
-          // marginLeft: '3vw'
+          height: '100%',
+         
+          
         }}>
-          <Card className="d-flex justify-content-center" style={{ width: '18rem' }}>
-            <Card.Img style={{ width: '18rem' }} variant="top" src="images/don_face.png"/>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img style={{ width: '8rem' }} variant="top" src="images/don_face.png"/>
             <Card.Body>
               <Card.Title>Where's Don Gon?</Card.Title>
               <Card.Text>
