@@ -1,5 +1,6 @@
 import React from 'react'
-import Counter from './Counter'
+import Win from './Win'
+import Router from 'react-router-dom'
 
 function getRandomInt (min, max) {
   min = Math.ceil(min)
@@ -22,17 +23,21 @@ function getHeight () {
 
 class Don extends React.Component {
  state = {
-   count: 0,
    rect: {
      x: getWidth(),
      y: getHeight()
    }
  }
 
+ //  handleClick = () => {
+ //    this.setState(({ count }) => ({
+ //      count: count + 1
+ //    }))
+ //  }
+
  handleClick = () => {
-   this.setState(({ count }) => ({
-     count: count + 1
-   }))
+   this.props.handleClick()
+   <Link />
  }
 
  render () {
