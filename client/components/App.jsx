@@ -1,9 +1,9 @@
 import React from 'react'
 // import Counter from './Counter'
-import Don from './Don'
 import Landing from './Landing'
 import { Route } from 'react-router-dom'
 import Game from './Game'
+import Win from './Win'
 
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
@@ -32,12 +32,12 @@ class App extends React.Component {
         fill: `url(${'images/don_wally.jpg'})`
       }
     }
-
     return (
       <React.Fragment>
         {/* <Landing /> */}
         <Route exact path='/' component= { Landing }/>
         <Route path='/game' render={() => <Game handleClick={this.handleClick} count={this.state.count} isAuthed={true}/>}/>
+        <Route path='/game/win' component = { Win } /> 
       </React.Fragment>
     )
   }

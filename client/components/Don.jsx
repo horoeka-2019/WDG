@@ -1,6 +1,6 @@
 import React from 'react'
 import Win from './Win'
-import Router from 'react-router-dom'
+import {Router, Redirect} from 'react-router-dom'
 
 function getRandomInt (min, max) {
   min = Math.ceil(min)
@@ -37,7 +37,7 @@ class Don extends React.Component {
 
  handleClick = () => {
    this.props.handleClick()
-  //  <Link />
+   return <Redirect to='/game/win' />
  }
 
  render () {
