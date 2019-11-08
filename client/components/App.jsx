@@ -1,14 +1,13 @@
 import React from 'react'
-// import Counter from './Counter'
-import Landing from './Landing'
 import { Route } from 'react-router-dom'
+import Landing from './Landing'
 import Game from './Game'
 import Win from './Win'
-import "./App.scss"
-import Background from './Background'
 
-const randomHexColor = () =>
-  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+
+
+// const randomHexColor = () =>
+//   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
 class App extends React.Component {
   state = {
@@ -25,11 +24,11 @@ class App extends React.Component {
   }
 
   render () {
-    const styles = {
-      paperContainer: {
-        backgroundImage: `url(${'images/wally1.jpg'})`
-      }
-    }
+    // const styles = {
+    //   paperContainer: {
+    //     backgroundImage: `url(${'images/wally1.jpg'})`
+    //   }
+    // }
 
     const donStyle = {
       container: {
@@ -37,24 +36,13 @@ class App extends React.Component {
       }
     }
     return (
-      <div style={{height:'100%'}}>
+      <div>
         {/* <Landing />
         <Game handleClick={this.handleClick} count={this.state.count}/> */}
-
-        {/* <Game handleClick={this.handleClick} count={this.state.count}/> */}
-
-        {/* <Route exact path='/' component = { Landing } />
-        <Route path='/game' component = { Game } />
-        <Route path='/win' component = { Win } /> */}
-
         {/* <Counter />
         <svg width={window.innerWidth} height={window.innerHeight}>
           <circle cx={this.state.circle.cx} cy={this.state.circle.cy} r={this.state.circle.r} />
         </svg> */}
-        {/* <Landing />
-        <Counter /> */}
-
-        {/* <Landing /> */}
         
         <Route exact path='/' component= { Landing }/>
         <Route path='/game' render={() => <Game handleClick={this.handleClick} count={this.state.count} isAuthed={true}/>}/>

@@ -8,12 +8,12 @@ class Landing extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div className='container textCenter' style={{
-          // width: '100%',
-          height: '100%',
-         
-          
-        }}>
+        <div style={{
+          backgroundColor: 'red',
+          height: '100vh',
+          }}>
+
+        <div className='container textCenter'>
           <Card style={{ width: '18rem' }}>
             <Card.Img style={{ width: '8rem' }} variant="top" src="images/don_face.png"/>
             <Card.Body>
@@ -29,7 +29,7 @@ class Landing extends React.Component {
             </Card.Body>
           </Card>
         </div>
-
+        </div>
       </React.Fragment>
     )
   }

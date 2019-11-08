@@ -7,11 +7,13 @@ class Win extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div className='container textCenter' style={{
-          backgroundImage: `url(${'images/wally1.jpg'})`,
-          height:'100%'
-        }}>
-          <Card className="d-flex justify-content-center" style={{ width: '18rem' }}>
+         <div style={{
+          backgroundColor: 'red',
+          height: '100vh',
+          }}>
+
+           <div className='container textCenter'>
+          <Card style={{ width: '18rem' }}>
             <Card.Img style={{ width: '8rem' }} variant="top" src="images/don_face.png"/>
             <Card.Body>
               <Card.Title>You won!</Card.Title>
@@ -19,12 +21,13 @@ class Win extends React.Component {
                   Play again??
               </Card.Text>
               <Button variant="primary">
-                <Link to={'/game'}>
+                <Link to={'/game'}style = {{ color: 'black' }}> Start Game!
                 </Link>
-                Start Game!
+
               </Button>
             </Card.Body>
           </Card>
+        </div>
         </div>
 
       </React.Fragment>
