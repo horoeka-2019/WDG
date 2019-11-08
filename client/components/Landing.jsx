@@ -9,7 +9,7 @@ class Landing extends React.Component {
     return (
       <React.Fragment>
         <div style={{
-          backgroundColor: 'red',
+          backgroundImage: `url(${'/images/wally1.jpg'})`,
           height: '100vh',
           }}>
 
