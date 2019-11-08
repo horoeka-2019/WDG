@@ -1,6 +1,6 @@
 import React from 'react'
 import Win from './Win'
-import {Router, Redirect} from 'react-router-dom'
+import { Router, Redirect } from 'react-router-dom'
 
 function getRandomInt (min, max) {
   min = Math.ceil(min)
@@ -26,7 +26,8 @@ class Don extends React.Component {
    rect: {
      x: getWidth(),
      y: getHeight()
-   }
+   },
+   redirect: false
  }
 
  //  handleClick = () => {
@@ -36,17 +37,23 @@ class Don extends React.Component {
  //  }
 
  handleClick = () => {
-   this.props.handleClick()
-   return <Redirect to='/game/win' />
+   this.setState({
+     redirect: true
+   })
  }
 
  render () {
    return (
-     <svg width={window.innerWidth} height={window.innerHeight - 200} styles={{ backgroundImage: `url(${'../../server/public/images/wally1.jpg'})` }}>
-       <rect x={this.state.rect.x} y={this.state.rect.y} height="80" width="50" onClick={this.handleClick}
-         //  style={{backgroundImage: `url(${'images/don_wally.jpg'})`}}
-       />
-     </svg>
+     <React.Fragment>
+     ({
+         this.state.redirect ? <Redirect to='/win' />
+           : <svg width={window.innerWidth} height={window.innerHeight - 200} styles={{ backgroundImage: `url(${'../../server/public/images/wally1.jpg'})` }}>
+             <rect x={this.state.rect.x} y={this.state.rect.y} height="80" width="50" onClick={this.handleClick}
+             //  style={{backgroundImage: `url(${'images/don_wally.jpg'})`}}
+             />
+           </svg>
+       })
+     </React.Fragment>
    )
  }
 }
