@@ -1,4 +1,5 @@
 import React from 'react'
+import Counter from './Counter'
 
 function getRandomInt (min, max) {
   min = Math.ceil(min)
@@ -21,11 +22,11 @@ function getHeight () {
 
 class Don extends React.Component {
  state = {
+   count: 0,
    rect: {
      x: getWidth(),
      y: getHeight()
-   },
-   count: 0
+   }
  }
 
  handleClick = () => {
@@ -36,10 +37,10 @@ class Don extends React.Component {
 
  render () {
    return (
-     <svg width={window.innerWidth} height={window.innerHeight - 200} styles={{ backgroundImage: `url(${'images/wally1.jpg'})` }}>
-       <rect x={this.state.rect.x} y={this.state.rect.y} height="80" width="50" style={{
-         backgroundImage: `url(${'images/don_wally.jpg'})`
-       }} />
+     <svg width={window.innerWidth} height={window.innerHeight - 200} styles={{ backgroundImage: `url(${'../../server/public/images/wally1.jpg'})` }}>
+       <rect x={this.state.rect.x} y={this.state.rect.y} height="80" width="50" onClick={this.handleClick}
+         //  style={{backgroundImage: `url(${'images/don_wally.jpg'})`}}
+       />
      </svg>
    )
  }
