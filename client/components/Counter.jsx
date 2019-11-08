@@ -1,21 +1,45 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
+// import Button from 'react-bootstrap/Button'
 
 class Counter extends React.Component {
   state = {
-    count: 3
+    count: 0
 
   }
 
-  increaseCount = () => {
-    const currentCount = this.state.count
-    this.setState({
-      count: currentCount + 1
-    }
-    )
+  handleClick = () => {
+    this.setState(({ count }) => ({
+      count: count + 1
+    }))
   }
+
+  //   render () {
+  //     return (
+  //       <React.Fragment>
+  //         <div>
+  //           <div onClick={this.handleClick}>Your Score</div>
+  //           <button>{this.state.count}</button>
+  //         </div>
+
+  //       </React.Fragment>
+  //     )
+  //   }
+  // }
 
   render () {
-    return <button onClick= {() => alert('component Wally')}>{this.state.count}</button>
+    return (
+      <React.Fragment>
+      
+        <Card className="card text-white bg-dark mb-3" style={{ width: '15rem', height: '7rem' }}>
+          <Card.Body>
+            <Card.Title>Dons Found</Card.Title>
+            <Card.Title>{this.state.count}</Card.Title>
+          </Card.Body>
+        </Card>
+
+      </React.Fragment>
+    )
   }
 }
 
