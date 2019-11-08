@@ -3,17 +3,6 @@ import Card from 'react-bootstrap/Card'
 // import Button from 'react-bootstrap/Button'
 
 class Counter extends React.Component {
-  state = {
-    count: 0
-
-  }
-
-  handleClick = () => {
-    this.setState(({ count }) => ({
-      count: count + 1
-    }))
-  }
-
   //   render () {
   //     return (
   //       <React.Fragment>
@@ -36,7 +25,7 @@ class Counter extends React.Component {
             <Card.Title className='font-weight-bold' style={{ fontSize: '2rem' }}>WHERE HAS DON GON?!</Card.Title>
             <Card.Subtitle style={{ fontSize: '1.3rem' }}>Your Score:</Card.Subtitle>
             <br></br>
-            <Card.Subtitle style={{ fontSize: '1.3rem' }}>{this.state.count}</Card.Subtitle>
+            <Card.Subtitle style={{ fontSize: '1.3rem' }}>{this.props.count}</Card.Subtitle>
           </Card.Body>
         </Card>
       </React.Fragment>

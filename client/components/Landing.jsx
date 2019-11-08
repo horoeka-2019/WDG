@@ -22,9 +22,9 @@ class Landing extends React.Component {
                   Click on Don to Win!
               </Card.Text>
               <Button variant="primary">
-                <Link to={'/game'}> Start Game!
+                <Link to={'/game'}style = {{ color: 'black' }}> Start Game!
                 </Link>
-               
+
               </Button>
             </Card.Body>
           </Card>
