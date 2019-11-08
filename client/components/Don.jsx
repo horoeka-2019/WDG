@@ -36,6 +36,14 @@ class Don extends React.Component {
  //    }))
  //  }
 
+//  window.onload = () => {
+//   var img = document.createElement('img')
+//   img.setAttribute('style', 'position:absolute')
+//   img.setAttribute('src', 'wally1.png')
+//   document.body.appendChild(img)
+//   var xy =
+// }
+
  handleClick = () => {
    this.setState({
      redirect: true
@@ -49,7 +57,7 @@ class Don extends React.Component {
          this.state.redirect ? <Redirect to='/win' />
            : <svg width={window.innerWidth} height={window.innerHeight - 200} styles={{ backgroundImage: `url(${'../../server/public/images/wally1.jpg'})` }}>
              <rect x={this.state.rect.x} y={this.state.rect.y} height="80" width="50" onClick={this.handleClick}
-             //  style={{backgroundImage: `url(${'images/don_wally.jpg'})`}}
+             
              />
            </svg>
        })

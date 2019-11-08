@@ -4,6 +4,7 @@ import Landing from './Landing'
 import { Route } from 'react-router-dom'
 import Game from './Game'
 import Win from './Win'
+import Background from './Background'
 
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
@@ -13,6 +14,8 @@ class App extends React.Component {
     count: 0
 
   }
+  
+
 
   handleClick = () => {
     this.setState(({ count }) => ({
@@ -33,7 +36,7 @@ class App extends React.Component {
       }
     }
     return (
-      <React.Fragment>
+      <div style={{backgroundImage: `url(${'images/wally1.jpg'})`}}>
         {/* <Landing />
         <Game handleClick={this.handleClick} count={this.state.count}/> */}
 
@@ -51,10 +54,11 @@ class App extends React.Component {
         <Counter /> */}
 
         {/* <Landing /> */}
+        
         <Route exact path='/' component= { Landing }/>
         <Route path='/game' render={() => <Game handleClick={this.handleClick} count={this.state.count} isAuthed={true}/>}/>
         <Route path='/win' component = { Win } /> 
-      </React.Fragment>
+      </div>
     )
   }
 }

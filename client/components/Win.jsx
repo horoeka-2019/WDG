@@ -8,7 +8,7 @@ class Win extends React.Component {
     return (
       <React.Fragment>
         <div className='container textCenter' style={{
-          marginTop: '50px'
+          backgroundImage: `url(${'images/wally1.jpg'})`
         }}>
           <Card className="d-flex justify-content-center" style={{ width: '18rem' }}>
             <Card.Img style={{ width: '18rem' }} variant="top" src="images/don_face.png"/>
