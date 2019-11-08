@@ -37,7 +37,7 @@ class Don extends React.Component {
 
  handleClick = () => {
    this.props.handleClick()
-   <Link />
+  //  <Link />
  }
 
  render () {

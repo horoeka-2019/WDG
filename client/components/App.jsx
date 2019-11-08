@@ -32,16 +32,12 @@ class App extends React.Component {
         fill: `url(${'images/don_wally.jpg'})`
       }
     }
+
     return (
       <React.Fragment>
-        <Counter />
-
-        <Landing />
-        <Game handleClick={this.handleClick} count={this.state.count}/>
-
-        <Route exact path='/' component = { Landing } />
-        <Route path='/game' component = { Don } />
-
+        {/* <Landing /> */}
+        <Route exact path='/' component= { Landing }/>
+        <Route path='/game' render={() => <Game handleClick={this.handleClick} count={this.state.count} isAuthed={true}/>}/>
       </React.Fragment>
     )
   }
