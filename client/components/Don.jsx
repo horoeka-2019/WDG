@@ -53,12 +53,9 @@ class Don extends React.Component {
                </pattern>
              </defs>
 
-             <rect x={this.state.rect.x} y={this.state.rect.y} width="40" height="40" stroke="black" fill="url(#img1)" filter="url(#sparklin)"/>
+             <rect onClick={this.handleClick} x={this.state.rect.x} y={this.state.rect.y} width="40" height="40" stroke="black" fill="url(#img1)" filter="url(#sparklin)"/>
            </svg>
        })
-       {
-
-       }
      </React.Fragment>
    )
  }
