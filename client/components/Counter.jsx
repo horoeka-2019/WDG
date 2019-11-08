@@ -3,19 +3,6 @@ import Card from 'react-bootstrap/Card'
 // import Button from 'react-bootstrap/Button'
 
 class Counter extends React.Component {
-  //   render () {
-  //     return (
-  //       <React.Fragment>
-  //         <div>
-  //           <div onClick={this.handleClick}></div>
-  //           <button>{this.state.count}</button>
-  //         </div>
-
-  //       </React.Fragment>
-  //     )
-  //   }
-  // }
-
   render () {
     return (
       <React.Fragment>

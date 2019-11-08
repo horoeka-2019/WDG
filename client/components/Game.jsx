@@ -10,9 +10,7 @@ class Game extends React.Component {
         <Counter count={this.props.count}/>
       </React.Fragment>
     )
-
   }
-
 }
 
 export default Game

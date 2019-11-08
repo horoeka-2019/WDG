@@ -30,12 +30,6 @@ class Don extends React.Component {
    redirect: false
  }
 
- //  handleClick = () => {
- //    this.setState(({ count }) => ({
- //      count: count + 1
- //    }))
- //  }
-
  handleClick = () => {
    this.setState({
      redirect: true
@@ -43,16 +37,28 @@ class Don extends React.Component {
  }
 
  render () {
+   const styles = {
+     paperContainer: {
+       backgroundImage: `url(${'/images/wally1.jpg'})`
+     }
+   }
    return (
      <React.Fragment>
-     ({
+       ({
          this.state.redirect ? <Redirect to='/win' />
-           : <svg width={window.innerWidth} height={window.innerHeight - 200} styles={{ backgroundImage: `url(${'../../server/public/images/wally1.jpg'})` }}>
-             <rect x={this.state.rect.x} y={this.state.rect.y} height="80" width="50" onClick={this.handleClick}
-             //  style={{backgroundImage: `url(${'images/don_wally.jpg'})`}}
-             />
+           : <svg className='crop-shapes' width={window.innerWidth} height={window.innerHeight - 200} style={styles.paperContainer}>
+             <defs>
+               <pattern id="img1" patternUnits="userSpaceOnUse" width="40" height="40">
+                 <image className='twombly' xlinkHref="http://www.simpleimageresizer.com/_uploads/photos/ce98e820/don_face_2_28.png"/>
+               </pattern>
+             </defs>
+
+             <rect x={this.state.rect.x} y={this.state.rect.y} width="40" height="40" stroke="black" fill="url(#img1)" filter="url(#sparklin)"/>
            </svg>
        })
+       {
+
+       }
      </React.Fragment>
    )
  }
