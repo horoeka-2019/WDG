@@ -8,29 +8,22 @@ class Counter extends React.Component {
 
   }
 
-  handleClick = () => {
-    this.setState(({ count }) => ({
-      count: count + 1
-    }))
-  }
+  // render () {
+  //   return (
+  //     <React.Fragment>
+  //       <div>
+  //         <div onClick={this.handleClick}>Your Score</div>
+  //         <button>{this.state.count}</button>
+  //       </div>
 
-  //   render () {
-  //     return (
-  //       <React.Fragment>
-  //         <div>
-  //           <div onClick={this.handleClick}>Your Score</div>
-  //           <button>{this.state.count}</button>
-  //         </div>
-
-  //       </React.Fragment>
-  //     )
-  //   }
+  //     </React.Fragment>
+  //   )
   // }
 
   render () {
     return (
       <React.Fragment>
-      
+
         <Card className="card text-white bg-dark mb-3" style={{ width: '15rem', height: '7rem' }}>
           <Card.Body>
             <Card.Title>Dons Found</Card.Title>
