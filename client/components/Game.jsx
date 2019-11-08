@@ -6,7 +6,7 @@ class Game extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Don />
+        <Don handleClick={this.props.handleClick} />
         <Counter />
       </React.Fragment>
     )
