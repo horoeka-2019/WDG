@@ -15,7 +15,7 @@ function getWidth () {
 
 function getHeight () {
   const height = window.innerHeight
-  const randomHeight = getRandomInt(200, height - 200)
+  const randomHeight = getRandomInt(200, height - 300)
   return randomHeight
 }
 
@@ -35,14 +35,11 @@ class Don extends React.Component {
  }
 
  render () {
-   const styles = {
-     donContainer: {
-       fill: `url${'images/don_wally.jpg'}`
-     }
-   }
    return (
-     <svg width={window.innerWidth} height={window.innerHeight} style>
-       <rect x={this.state.rect.x} y={this.state.rect.y} width="50" style={styles.donContainer} />
+     <svg width={window.innerWidth} height={window.innerHeight - 200} styles={{ backgroundImage: `url(${'images/wally1.jpg'})` }}>
+       <rect x={this.state.rect.x} y={this.state.rect.y} height="80" width="50" style={{
+         backgroundImage: `url(${'images/don_wally.jpg'})`
+       }} />
      </svg>
    )
  }
