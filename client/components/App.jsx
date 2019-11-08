@@ -1,5 +1,6 @@
 import React from 'react'
-import Counter from './Counter'
+//import Counter from './Counter'
+import Don from './Don'
 import Landing from './Landing'
 import { Route } from 'react-router-dom'
 
@@ -23,24 +24,19 @@ function getHeight () {
 }
 
 class App extends React.Component {
-  state = {
-    circle: {
-      cx: getWidth(),
-      cy: getHeight(),
-      r: 40
-    },
-    count: 0
-  }
-
   render () {
     return (
       <React.Fragment>
+        {/* <Don /> */}
         <Route exact path='/' component = { Landing } />
-        {/* <Landing /> */}
+        <Route path='/game' component = { Don } />
         {/* <Counter />
         <svg width={window.innerWidth} height={window.innerHeight}>
           <circle cx={this.state.circle.cx} cy={this.state.circle.cy} r={this.state.circle.r} />
         </svg> */}
+        {/* <Landing />
+        <Counter /> */}
+
       </React.Fragment>
     )
   }
