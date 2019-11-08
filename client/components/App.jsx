@@ -29,7 +29,7 @@ class App extends React.Component {
       <React.Fragment>
         {/* <Don /> */}
         <Route exact path='/' component = { Landing } />
-        <Route path='/game' component = { Don } />
+
         {/* <Counter />
         <svg width={window.innerWidth} height={window.innerHeight}>
           <circle cx={this.state.circle.cx} cy={this.state.circle.cy} r={this.state.circle.r} />
